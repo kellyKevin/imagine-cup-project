@@ -1,13 +1,38 @@
+/* index.css */
+
+/* Import Tailwind's base styles, components, and utilities */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Add any custom global styles below */
+
+/* Example: Custom global font settings */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply bg-gray-100 font-sans leading-normal tracking-normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Example: Custom styles for headings */
+h1, h2, h3 {
+  @apply font-bold text-gray-800;
+}
+
+/* Example: Custom button styles */
+button {
+  @apply rounded-lg transition duration-300 ease-in-out;
+}
+
+/* Example: Custom styles for links */
+a {
+  @apply text-indigo-600 hover:text-indigo-800 underline;
+}
+
+/* Media Queries for responsive design */
+@media (max-width: 640px) {
+  h1 {
+    @apply text-3xl;
+  }
+  button {
+    @apply px-4 py-2;
+  }
 }
